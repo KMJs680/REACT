@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>복습 리액트!</title>
+    <style>
+        #mydiv{
+            background: hotpink;
+            color: navy;
+            text-align: center;
+        }
+        #imgs{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: imgs;
+            animation-duration: 3s;
+            animation-iteration-count: 10;
+        }
+        @keyframes imgs {
+        0%   {left:0px; top:0px;}
+        25%  {left:200px; top:0px;}
+        50%  {left:200px; top:200px;}
+        75%  {left:0px; top:200px;}
+        100% {left:0px; top:0px;} 
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+    </div>
+    <div id="imgs">
+        <img src="../images/ball.png" alt="ball" >
+    </div>
+
+    <script type="text/babel">
+       const Hello = () => {
+            return(
+                <>
+                <h1>Hello 복습!</h1>
+                <p>리액트를 복습합시다.</p>
+                </>
+            );
+        }
+        const Img = () =>{
+            return(
+                <>
+                
+                </>
+            )
+        }
+
+        const container = document.getElementById('mydiv');
+        const root = ReactDOM.createRoot(container);
+        root.render(<Hello/>)
+       
+    </script>
+    
+</body>
+</html>
